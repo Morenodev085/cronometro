@@ -1,0 +1,28 @@
+@use 'hero';
+@use 'event';
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+   // Consulta de mídia para dispositivos móveis
+   @media (max-width: 640px) {
+    .container {
+        display: block; // Faz com que o contêiner se torne um bloco em vez de um flex container
+    }
+
+    .event__image {
+        width: 100%; // Faz com que a imagem ocupe toda a largura disponível
+        max-width: none; // Remove o limite máximo de largura para a imagem
+    }
+}

@@ -1,0 +1,53 @@
+.event {
+    background-image: linear-gradient(#fff, #805151);
+    padding: 20px; // Adiciona espaçamento interno
+
+    .container {
+        display: flex;
+        align-items: center; // Alinha verticalmente os itens no centro
+        gap: 20px; // Espaçamento entre a imagem e o texto
+    }
+        
+    .event__title {
+        display: flex;
+        flex: 1; // Permite que o título use todo o espaço disponível
+        flex-direction: row; // Alinha a imagem e o texto lado a lado
+        align-items: flex-start; // Alinha os itens no início da linha
+    }
+
+    .event__image {
+        max-width: 360px;
+        height: auto; // Mantém a proporção da imagem
+    }
+        
+    .event__lorem {
+        flex: 1; // Permite que o texto use todo o espaço disponível
+        display: flex;
+        flex-direction: column; // Alinha o título e o texto verticalmente
+        
+        &__titulo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px; // Espaço entre o título e o texto
+        }
+        
+        &__texto {
+            font-size: 18px; // Adiciona unidade 'px'
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }  
+
+    // Consulta de mídia para dispositivos móveis
+    @media (max-width: 640px) {
+        .container {
+            flex-direction: column; // Empilha a imagem e o texto verticalmente
+            align-items: center; // Centraliza os itens horizontalmente
+        }
+
+        .event__image {
+            width: 100%; // Faz com que a imagem ocupe toda a largura disponível
+            max-width: none; // Remove o limite máximo de largura
+            margin-top: 20px; // Adiciona espaço entre o texto e a imagem
+        }
+    }
+}

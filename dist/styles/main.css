@@ -1,0 +1,111 @@
+.hero {
+  background-image: url("../festa-de-aniversario-simples.b7294285.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.hero .container {
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  opacity: .7;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero__text {
+  color: azure;
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 64px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.event {
+  background-image: linear-gradient(#fff, #805151);
+  padding: 20px;
+}
+
+.event .container {
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.event .event__title {
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-start;
+  display: flex;
+}
+
+.event .event__image {
+  max-width: 360px;
+  height: auto;
+}
+
+.event .event__lorem {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+}
+
+.event .event__lorem__titulo {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.event .event__lorem__texto {
+  font-family: Times New Roman, Times, serif;
+  font-size: 18px;
+}
+
+@media (width <= 640px) {
+  .event .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event .event__image {
+    width: 100%;
+    max-width: none;
+    margin-top: 20px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+@media (width <= 640px) {
+  .container {
+    display: block;
+  }
+
+  .event__image {
+    width: 100%;
+    max-width: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
